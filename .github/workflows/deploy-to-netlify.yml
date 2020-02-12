@@ -1,12 +1,14 @@
-name: 'My Workflow'
+name: 'Github Clone Workflow'
 
 on:
-  release:
-    types: [published]
+  push:
+    branches:
+      - master
 
 jobs:
   deploy:
     name: 'Deploy to Netlify'
+    runs-on: ubuntu-latest
     steps:
       - uses: jsmrcaga/action-netlify-deploy@v1
         with:
