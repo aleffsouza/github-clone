@@ -10,6 +10,6 @@ jobs:
     steps:
       - uses: jsmrcaga/action-netlify-deploy@v1
         with:
-        	NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
+        	NETLIFY_AUTH_TOKEN: ${{ secrets.MY_NETLIFY_TOKEN_SECRET }}
           NETLIFY_DEPLOY_TO_PROD: true
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.MY_GITHUB_TOKEN }}
