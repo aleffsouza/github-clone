@@ -1,0 +1,15 @@
+name: 'My Workflow'
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  deploy:
+    name: 'Deploy to Netlify'
+    steps:
+      - uses: jsmrcaga/action-netlify-deploy@v1
+        with:
+        	NETLIFY_AUTH_TOKEN: ${{ secrets.MY_TOKEN_SECRET }}
+          NETLIFY_DEPLOY_TO_PROD: true
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
