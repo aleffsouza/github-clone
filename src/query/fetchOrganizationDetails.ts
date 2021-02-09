@@ -25,11 +25,6 @@ export default gql`
       location
       url
       avatarUrl
-      pinnedRepositories(first: 3) {
-        nodes {
-          ...commonRepoFields
-        }
-      }
       repositories(first: 10) {
         nodes {
           ...commonRepoFields

@@ -89,7 +89,6 @@ function _renderPageContent(ctx: any) {
         location={data.location}
         url={data.url}
       />
-      {_renderPinnedRepositoriesSection(data)}
       {_renderRepositoriesSection(data)}
     </>
   );
